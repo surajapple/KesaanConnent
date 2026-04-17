@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AgriAdvisory - Disease Detection</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#e6e9e7",
+                    "primary": "#186a22",
+                    "on-primary-container": "#f7fff1",
+                    "on-primary-fixed-variant": "#005312",
+                    "primary-fixed-dim": "#88d982",
+                    "surface-container-highest": "#e1e3e1",
+                    "inverse-surface": "#2e3130",
+                    "tertiary": "#765700",
+                    "secondary-container": "#fed7ca",
+                    "surface-container": "#eceeec",
+                    "on-secondary-fixed": "#2b160f",
+                    "on-surface": "#191c1b",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#002204",
+                    "tertiary-container": "#956e00",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#f8faf8",
+                    "on-tertiary-container": "#fffbff",
+                    "surface-container-low": "#f2f4f2",
+                    "surface-variant": "#e1e3e1",
+                    "primary-container": "#358438",
+                    "secondary": "#75584d",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#e4beb2",
+                    "on-background": "#191c1b",
+                    "surface": "#f8faf8",
+                    "inverse-primary": "#88d982",
+                    "on-surface-variant": "#3f4a3d",
+                    "outline-variant": "#bfcab9",
+                    "tertiary-fixed": "#ffdfa0",
+                    "inverse-on-surface": "#eff1ef",
+                    "primary-fixed": "#a3f69c",
+                    "surface-tint": "#1b6d24",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#261a00",
+                    "on-secondary-fixed-variant": "#5b4137",
+                    "on-tertiary-fixed-variant": "#5c4300",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#f8bd2a",
+                    "outline": "#6f7a6b",
+                    "surface-dim": "#d8dad9",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed": "#ffdbce",
+                    "on-secondary-container": "#795c51",
+                    "on-primary": "#ffffff",
+                    "background": "#f8faf8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex">
+<!-- SideNavBar Component -->
+<aside class="fixed left-0 top-0 h-full flex flex-col py-6 bg-[#f2f4f2] dark:bg-stone-900 h-screen w-72 rounded-r-[2rem] shadow-[0_12px_40px_rgba(25,28,27,0.06)] z-50">
+<div class="px-8 mb-10">
+<h1 class="text-xl font-extrabold text-[#186a22]">Kisan Sahayak</h1>
+<p class="text-xs text-stone-500 font-medium tracking-wide">Digital Agrarian</p>
+</div>
+<nav class="flex-1 space-y-1 overflow-y-auto">
+<!-- Mapping JSON labels & icons -->
+<a class="text-stone-600 dark:text-stone-400 mx-2 my-1 px-4 py-3 flex items-center gap-3 hover:bg-[#bfcab9] dark:hover:bg-stone-800 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-medium">Dashboard</span>
+</a>
+<a class="text-stone-600 dark:text-stone-400 mx-2 my-1 px-4 py-3 flex items-center gap-3 hover:bg-[#bfcab9] dark:hover:bg-stone-800 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="psychiatry">psychiatry</span>
+<span class="font-medium">Crop Recommendation</span>
+</a>
+<!-- Active State: Disease Detection -->
+<a class="bg-[#43A047] text-white rounded-full mx-2 my-1 px-4 py-3 flex items-center gap-3" href="#">
+<span class="material-symbols-outlined" data-icon="coronavirus">coronavirus</span>
+<span class="font-medium">Disease Detection</span>
+</a>
+<a class="text-stone-600 dark:text-stone-400 mx-2 my-1 px-4 py-3 flex items-center gap-3 hover:bg-[#bfcab9] dark:hover:bg-stone-800 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+<span class="font-medium">Yield Prediction</span>
+</a>
+<a class="text-stone-600 dark:text-stone-400 mx-2 my-1 px-4 py-3 flex items-center gap-3 hover:bg-[#bfcab9] dark:hover:bg-stone-800 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+<span class="font-medium">Market Prices</span>
+</a>
+<a class="text-stone-600 dark:text-stone-400 mx-2 my-1 px-4 py-3 flex items-center gap-3 hover:bg-[#bfcab9] dark:hover:bg-stone-800 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="wb_sunny">wb_sunny</span>
+<span class="font-medium">Weather Alerts</span>
+</a>
+<a class="text-stone-600 dark:text-stone-400 mx-2 my-1 px-4 py-3 flex items-center gap-3 hover:bg-[#bfcab9] dark:hover:bg-stone-800 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="bug_report">bug_report</span>
+<span class="font-medium">Pest Info</span>
+</a>
+</nav>
+<div class="px-4 mt-auto">
+<button class="w-full bg-primary-container text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 mb-6 shadow-lg shadow-primary-container/20">
+<span class="material-symbols-outlined">support_agent</span>
+                Expert Consultation
+            </button>
+<div class="border-t border-outline-variant/15 pt-4 space-y-1">
+<a class="text-stone-600 dark:text-stone-400 mx-2 my-1 px-4 py-3 flex items-center gap-3 hover:bg-[#bfcab9] rounded-full transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+<div class="flex items-center gap-3 px-6 py-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden">
+<img alt="Farmer Profile Picture" class="w-full h-full object-cover" data-alt="Close-up portrait of a weathered Indian farmer wearing a traditional turban, warm sun lighting, organic texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ4sdnoE9OOae6rhcTcjDw_JE9B-PUU_NxpptE4ChEY-SxGQDMkv1gdnRxr4-gQkAj_6K_bFXLIoim2kEAF8juxs8DSsGcjhoer3vBOwL4wZDPhPsTP2wu_dMqJqh8s3aDz-XqgWW8Kr65Wbn3YjLJ16sc8huKLGmaDq9TUgtQbOUIRWGxJJ1Rq3nrh4tg0FquvGtepP5iJ_utQUmZ_V1fBvM4nqL2oydpVa7E2r2fSPIilzhmAjc3ViJfYst2eMWvHGYrHnummRU"/>
+</div>
+<div>
+<p class="text-sm font-bold">Ram Singh</p>
+<p class="text-[10px] uppercase tracking-wider text-stone-500">Premium Member</p>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 ml-72 p-10 bg-surface">
+<header class="mb-10">
+<h2 class="text-4xl font-bold text-on-surface mb-2">Plant Disease Detection</h2>
+<p class="text-on-surface-variant max-w-2xl">Upload a clear photo of the affected plant leaf. Our AI will analyze the symptoms and provide immediate diagnosis and treatment plans.</p>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Action Area: Upload & Preview -->
+<div class="lg:col-span-7 space-y-8">
+<!-- Dropzone / Upload Area -->
+<div class="relative group cursor-pointer bg-surface-container-low rounded-lg p-1 aspect-video flex items-center justify-center border-2 border-dashed border-outline-variant hover:border-primary transition-all overflow-hidden">
+<div class="text-center p-8">
+<div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="add_a_photo">add_a_photo</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface">Click or Upload Plant Image</h3>
+<p class="text-on-surface-variant mt-2">Supports JPG, PNG up to 10MB</p>
+</div>
+<!-- Hidden overlay text for active state -->
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<!-- Preview Module -->
+<div class="bg-surface-container-lowest rounded-lg p-6 shadow-[0_12px_40px_rgba(25,28,27,0.06)] relative overflow-hidden">
+<div class="absolute top-4 left-6 z-10">
+<span class="bg-primary/90 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 backdrop-blur-sm">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Image Uploaded
+                        </span>
+</div>
+<div class="rounded-lg overflow-hidden h-80 relative">
+<img alt="Uploaded leaf preview" class="w-full h-full object-cover" data-alt="Macro close-up of a tomato leaf showing brown spots and yellowing edges characteristic of late blight disease, detailed texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHYMYgs5Qdfl8I39K4wXMw9SrE9161kSuvexD1geyaDj-FKImE3SLVFllG6c981TLXReQ0tuLo9KZW3xkBBkw8EIjq29Jw5mm4C2s9HUV3qfHh-2DmnI24bq9LAgA859Ygw_Y9ZIC_obbNHiFy4dS37UjlbEHbutqcybS2upBtGsey8i-DCWe8DjGtsu7jtTd4t1xueTmI5_ce7qphFhwiUaGKVUCOv6bRXJCxjo3Ou-WWsR4Qbo23zCgt4nSDU4kAp6odOc0VR3M"/>
+<!-- AI Scanning Effect Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+</div>
+<div class="mt-6 flex justify-center">
+<button class="bg-primary hover:bg-primary-container text-on-primary text-lg font-bold px-12 py-4 rounded-xl flex items-center gap-3 transition-all transform active:scale-95 shadow-xl shadow-primary/20">
+<span class="material-symbols-outlined">analytics</span>
+                            Analyze Plant Health
+                        </button>
+</div>
+</div>
+</div>
+<!-- Results Sidebar: The Advisory Lens -->
+<div class="lg:col-span-5 space-y-6">
+<div class="bg-surface-container-lowest rounded-lg p-8 shadow-[0_12px_40px_rgba(25,28,27,0.06)] border-l-4 border-primary relative overflow-hidden">
+<div class="flex justify-between items-start mb-6">
+<div>
+<span class="text-xs font-bold text-primary uppercase tracking-widest block mb-1">Diagnosis Result</span>
+<h3 class="text-3xl font-bold text-on-surface">Late Blight</h3>
+</div>
+<div class="bg-primary/10 text-primary px-4 py-2 rounded-full flex flex-col items-center">
+<span class="text-xl font-bold">98%</span>
+<span class="text-[10px] font-bold uppercase">Confidence</span>
+</div>
+</div>
+<p class="text-on-surface-variant mb-8 leading-relaxed">
+                        Phytophthora infestans detected. This fungal-like organism thrives in cool, wet weather and can rapidly devastate your crop if left untreated.
+                    </p>
+<div class="space-y-6">
+<h4 class="font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">medical_services</span>
+                            Recommended Treatment
+                        </h4>
+<div class="space-y-4">
+<!-- Treatment Item -->
+<div class="flex gap-4 p-4 rounded-xl bg-surface-container-low">
+<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="sanitizer">sanitizer</span>
+</div>
+<div>
+<p class="font-bold text-sm">Fungicide Application</p>
+<p class="text-xs text-on-surface-variant mt-1">Apply Copper-based fungicide or Chlorothalonil every 7-10 days.</p>
+</div>
+</div>
+<!-- Treatment Item -->
+<div class="flex gap-4 p-4 rounded-xl bg-surface-container-low">
+<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="water_drop">water_drop</span>
+</div>
+<div>
+<p class="font-bold text-sm">Pruning &amp; Airflow</p>
+<p class="text-xs text-on-surface-variant mt-1">Remove infected leaves and ensure proper spacing between plants.</p>
+</div>
+</div>
+<!-- Treatment Item -->
+<div class="flex gap-4 p-4 rounded-xl bg-surface-container-low">
+<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="grass">grass</span>
+</div>
+<div>
+<p class="font-bold text-sm">Nutrient Support</p>
+<p class="text-xs text-on-surface-variant mt-1">Use Potash-rich fertilizer to strengthen plant cell walls.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Button inside results -->
+<button class="w-full mt-8 border border-outline-variant py-4 rounded-xl font-bold text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">download</span>
+                        Download Detailed PDF Report
+                    </button>
+</div>
+<!-- Weather/Condition Advisory Card -->
+<div class="bg-secondary-container/30 rounded-lg p-6 flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="warning" style="font-variation-settings: 'FILL' 1;">warning</span>
+<div>
+<p class="text-sm font-bold text-on-secondary-container">High Risk Alert</p>
+<p class="text-xs text-on-secondary-container/80">Incoming rain forecast for 48 hours. Protect treated crops with rain covers if possible.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- FAB Suppression: This is a details/task screen, so FAB is suppressed according to the protocol. -->
+</body></html>

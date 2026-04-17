@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#e6e9e7",
+                        "primary": "#186a22",
+                        "on-primary-container": "#f7fff1",
+                        "on-primary-fixed-variant": "#005312",
+                        "primary-fixed-dim": "#88d982",
+                        "surface-container-highest": "#e1e3e1",
+                        "inverse-surface": "#2e3130",
+                        "tertiary": "#765700",
+                        "secondary-container": "#fed7ca",
+                        "surface-container": "#eceeec",
+                        "on-secondary-fixed": "#2b160f",
+                        "on-surface": "#191c1b",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#002204",
+                        "tertiary-container": "#956e00",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f8faf8",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-container-low": "#f2f4f2",
+                        "surface-variant": "#e1e3e1",
+                        "primary-container": "#358438",
+                        "secondary": "#75584d",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#e4beb2",
+                        "on-background": "#191c1b",
+                        "surface": "#f8faf8",
+                        "inverse-primary": "#88d982",
+                        "on-surface-variant": "#3f4a3d",
+                        "outline-variant": "#bfcab9",
+                        "tertiary-fixed": "#ffdfa0",
+                        "inverse-on-surface": "#eff1ef",
+                        "primary-fixed": "#a3f69c",
+                        "surface-tint": "#1b6d24",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#261a00",
+                        "on-secondary-fixed-variant": "#5b4137",
+                        "on-tertiary-fixed-variant": "#5c4300",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#f8bd2a",
+                        "outline": "#6f7a6b",
+                        "surface-dim": "#d8dad9",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#ffdbce",
+                        "on-secondary-container": "#795c51",
+                        "on-primary": "#ffffff",
+                        "background": "#f8faf8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- SideNavBar (Shared Component) -->
+<aside class="fixed left-0 top-0 h-full flex flex-col py-6 bg-[#f2f4f2] dark:bg-stone-900 h-screen w-72 rounded-r-[2rem] shadow-[0_12px_40px_rgba(25,28,27,0.06)] hidden md:flex z-50">
+<div class="px-8 mb-10">
+<h1 class="text-xl font-extrabold text-[#186a22]">Kisan Sahayak</h1>
+<p class="text-label-md text-stone-500">Digital Agrarian</p>
+</div>
+<nav class="flex-grow">
+<div class="text-stone-600 dark:text-stone-400 mx-2 my-1 px-4 py-3 flex items-center gap-3 hover:bg-[#bfcab9] dark:hover:bg-stone-800 rounded-full transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-medium">Dashboard</span>
+</div>
+<!-- ACTIVE TAB: Crop Recommendation -->
+<div class="bg-[#43A047] text-white rounded-full mx-2 my-1 px-4 py-3 flex items-center gap-3 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="psychiatry">psychiatry</span>
+<span class="font-medium">Crop Recommendation</span>
+</div>
+<div class="text-stone-600 dark:text-stone-400 mx-2 my-1 px-4 py-3 flex items-center gap-3 hover:bg-[#bfcab9] dark:hover:bg-stone-800 rounded-full transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="coronavirus">coronavirus</span>
+<span class="font-medium">Disease Detection</span>
+</div>
+<div class="text-stone-600 dark:text-stone-400 mx-2 my-1 px-4 py-3 flex items-center gap-3 hover:bg-[#bfcab9] dark:hover:bg-stone-800 rounded-full transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+<span class="font-medium">Yield Prediction</span>
+</div>
+<div class="text-stone-600 dark:text-stone-400 mx-2 my-1 px-4 py-3 flex items-center gap-3 hover:bg-[#bfcab9] dark:hover:bg-stone-800 rounded-full transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+<span class="font-medium">Market Prices</span>
+</div>
+<div class="text-stone-600 dark:text-stone-400 mx-2 my-1 px-4 py-3 flex items-center gap-3 hover:bg-[#bfcab9] dark:hover:bg-stone-800 rounded-full transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="wb_sunny">wb_sunny</span>
+<span class="font-medium">Weather Alerts</span>
+</div>
+<div class="text-stone-600 dark:text-stone-400 mx-2 my-1 px-4 py-3 flex items-center gap-3 hover:bg-[#bfcab9] dark:hover:bg-stone-800 rounded-full transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="bug_report">bug_report</span>
+<span class="font-medium">Pest Info</span>
+</div>
+</nav>
+<div class="mt-auto px-4 space-y-2">
+<button class="w-full bg-primary-container text-white py-4 px-6 rounded-xl font-bold flex items-center justify-center gap-2 mb-6">
+<span class="material-symbols-outlined">support_agent</span>
+                Expert Consultation
+            </button>
+<div class="text-stone-600 dark:text-stone-400 mx-2 my-1 px-4 py-2 flex items-center gap-3 hover:bg-[#bfcab9] rounded-full transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</div>
+<div class="text-stone-600 dark:text-stone-400 mx-2 my-1 px-4 py-2 flex items-center gap-3 hover:bg-[#bfcab9] rounded-full transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span>Support</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="md:ml-72 min-h-screen p-4 md:p-10 lg:p-14">
+<!-- Header -->
+<header class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<h2 class="text-4xl font-extrabold text-on-surface tracking-tight">Crop Recommendation</h2>
+<p class="text-on-surface-variant mt-2 text-lg">Input soil parameters to find the most suitable crops for your field.</p>
+</div>
+<div class="flex items-center gap-4 bg-surface-container-low p-2 rounded-full pr-6">
+<img alt="Farmer Profile" class="w-12 h-12 rounded-full object-cover" data-alt="close-up portrait of a smiling Indian farmer in a sunlit field wearing traditional attire and a warm expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD48AbfwjDsyghASABGuzRIHpbOSv0VYhNmU6lJSyPnZUsTHEcUoi4BoOHttvzDJvqawX9aXM4EgIsJ8cxrKaV4JkgosBFshS955wj0AIn5HPYwu017t0SeHtumQp5YqPF1nj9Rijty7-tTFtJb5iRG5g08sORsk-8mZvMwWEN8qIQFQzmoeYWUaMQbRzZ0fnRQIJruCah8Jc3i_HNBeQm6hQcFlKIfQxlIg5zP69czIvKfY379py_Shddp6oGwmfTcp8NLAUlwdQM"/>
+<div>
+<p class="font-bold text-sm">Rajesh Kumar</p>
+<p class="text-xs text-on-surface-variant">Punjab, Sector 12</p>
+</div>
+</div>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Side: Input Form (Asymmetric larger column) -->
+<section class="lg:col-span-7 bg-surface-container-low p-8 rounded-lg">
+<div class="mb-8">
+<h3 class="text-2xl font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">analytics</span>
+                        Soil &amp; Climate Data
+                    </h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Nitrogen -->
+<div class="space-y-2">
+<label class="text-sm font-semibold text-on-surface-variant ml-2">Nitrogen (N)</label>
+<div class="relative">
+<input class="w-full h-16 bg-surface-container-lowest border-none rounded-2xl px-6 focus:ring-2 focus:ring-primary/40 text-lg font-medium outline-none" placeholder="45.0" type="number"/>
+<span class="absolute right-6 top-1/2 -translate-y-1/2 text-on-surface-variant opacity-50">mg/kg</span>
+</div>
+</div>
+<!-- Phosphorus -->
+<div class="space-y-2">
+<label class="text-sm font-semibold text-on-surface-variant ml-2">Phosphorus (P)</label>
+<div class="relative">
+<input class="w-full h-16 bg-surface-container-lowest border-none rounded-2xl px-6 focus:ring-2 focus:ring-primary/40 text-lg font-medium outline-none" placeholder="32.0" type="number"/>
+<span class="absolute right-6 top-1/2 -translate-y-1/2 text-on-surface-variant opacity-50">mg/kg</span>
+</div>
+</div>
+<!-- Potassium -->
+<div class="space-y-2">
+<label class="text-sm font-semibold text-on-surface-variant ml-2">Potassium (K)</label>
+<div class="relative">
+<input class="w-full h-16 bg-surface-container-lowest border-none rounded-2xl px-6 focus:ring-2 focus:ring-primary/40 text-lg font-medium outline-none" placeholder="18.0" type="number"/>
+<span class="absolute right-6 top-1/2 -translate-y-1/2 text-on-surface-variant opacity-50">mg/kg</span>
+</div>
+</div>
+<!-- pH Level -->
+<div class="space-y-2">
+<label class="text-sm font-semibold text-on-surface-variant ml-2">pH Level</label>
+<div class="relative">
+<input class="w-full h-16 bg-surface-container-lowest border-none rounded-2xl px-6 focus:ring-2 focus:ring-primary/40 text-lg font-medium outline-none" placeholder="6.5" step="0.1" type="number"/>
+<span class="absolute right-6 top-1/2 -translate-y-1/2 text-on-surface-variant opacity-50">pH</span>
+</div>
+</div>
+<!-- Temperature -->
+<div class="space-y-2">
+<label class="text-sm font-semibold text-on-surface-variant ml-2">Temperature</label>
+<div class="relative">
+<input class="w-full h-16 bg-surface-container-lowest border-none rounded-2xl px-6 focus:ring-2 focus:ring-primary/40 text-lg font-medium outline-none" placeholder="28" type="number"/>
+<span class="absolute right-6 top-1/2 -translate-y-1/2 text-on-surface-variant opacity-50">°C</span>
+</div>
+</div>
+<!-- Rainfall -->
+<div class="space-y-2">
+<label class="text-sm font-semibold text-on-surface-variant ml-2">Annual Rainfall</label>
+<div class="relative">
+<input class="w-full h-16 bg-surface-container-lowest border-none rounded-2xl px-6 focus:ring-2 focus:ring-primary/40 text-lg font-medium outline-none" placeholder="200" type="number"/>
+<span class="absolute right-6 top-1/2 -translate-y-1/2 text-on-surface-variant opacity-50">mm</span>
+</div>
+</div>
+</div>
+<div class="mt-10">
+<button class="w-full h-20 bg-primary text-on-primary rounded-xl text-xl font-bold flex items-center justify-center gap-3 transition-transform active:scale-[0.98] shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">potted_plant</span>
+                        Get Recommendation
+                    </button>
+</div>
+</section>
+<!-- Right Side: Visual Results & Insights -->
+<section class="lg:col-span-5 space-y-6">
+<div class="bg-surface-container-highest p-8 rounded-lg relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="text-2xl font-bold mb-6">Top Suggested Crops</h3>
+<div class="space-y-4">
+<!-- Crop Card 1 -->
+<div class="bg-surface-container-lowest p-5 rounded-lg border-l-4 border-primary">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">eco</span>
+</div>
+<div>
+<h4 class="text-xl font-bold">Cotton</h4>
+<p class="text-sm text-on-surface-variant">Ideal for black soil</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-2xl font-black text-primary">92%</span>
+<p class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant">Confidence</p>
+</div>
+</div>
+<div class="w-full h-2.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 92%"></div>
+</div>
+</div>
+<!-- Crop Card 2 -->
+<div class="bg-surface-container-lowest p-5 rounded-lg border-l-4 border-primary-fixed-dim">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">grass</span>
+</div>
+<div>
+<h4 class="text-xl font-bold">Rice</h4>
+<p class="text-sm text-on-surface-variant">Requires high water retention</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-2xl font-black text-primary-container">78%</span>
+<p class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant">Confidence</p>
+</div>
+</div>
+<div class="w-full h-2.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 78%"></div>
+</div>
+</div>
+<!-- Crop Card 3 -->
+<div class="bg-surface-container-lowest p-5 rounded-lg border-l-4 border-outline-variant">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-3xl">bakery_dining</span>
+</div>
+<div>
+<h4 class="text-xl font-bold">Maize</h4>
+<p class="text-sm text-on-surface-variant">Moderate climate suitable</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-2xl font-black text-on-surface-variant">64%</span>
+<p class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant">Confidence</p>
+</div>
+</div>
+<div class="w-full h-2.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-outline rounded-full" style="width: 64%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorative Background Element -->
+<div class="absolute -bottom-10 -right-10 w-48 h-48 bg-primary/5 rounded-full blur-3xl"></div>
+</div>
+<!-- AI Advisory Lens Card -->
+<div class="bg-surface-container-lowest border-l-4 border-primary p-6 rounded-lg shadow-sm relative group overflow-hidden">
+<div class="flex items-start gap-4">
+<div class="bg-primary-container text-white p-3 rounded-full">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">neurology</span>
+</div>
+<div>
+<h4 class="font-bold text-primary mb-1">AI Advisory Insight</h4>
+<p class="text-sm leading-relaxed text-on-surface-variant">
+                                Based on current 7-day weather trends, Cotton yields are expected to be 15% higher this season. Consider early sowing for optimal root development.
+                            </p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Bottom Navigation for Mobile -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-surface-container-lowest flex justify-around items-center py-4 px-2 z-50 rounded-t-3xl shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+<div class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] font-medium">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">psychiatry</span>
+<span class="text-[10px] font-bold">Crops</span>
+</div>
+<div class="relative -top-8">
+<div class="bg-primary text-on-primary w-16 h-16 rounded-full flex items-center justify-center shadow-lg shadow-primary/40 ring-8 ring-surface">
+<span class="material-symbols-outlined text-3xl">add</span>
+</div>
+</div>
+<div class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">wb_sunny</span>
+<span class="text-[10px] font-medium">Weather</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-[10px] font-medium">Profile</span>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,1385 @@
+INFO:     Will watch for changes in these directories: ['/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [16174] using StatReload
+INFO:     Started server process [16177]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:61774 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61785 - "POST /predict/yield HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62015 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62015 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62053 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62053 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62062 - "GET /predict/states HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62064 - "GET /predict/prices/all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62062 - "GET /predict/states HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62062 - "GET /predict/prices/all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62062 - "GET /predict/prices/all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62062 - "GET /predict/prices/all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62062 - "GET /predict/prices/all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62062 - "GET /predict/prices/all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62062 - "GET /predict/prices/all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62062 - "GET /predict/prices/all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62062 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62062 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62087 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62087 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62101 - "POST /predict/yield HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/protocols/http/h11_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/main.py", line 60, in get_yield_prediction
+    result = predict_yield(data.dict())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/models/yield_model.py", line 53, in predict_yield
+    season = inputs.get('season', '').lower()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'lower'
+INFO:     127.0.0.1:62124 - "POST /predict/yield HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/protocols/http/h11_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/main.py", line 60, in get_yield_prediction
+    result = predict_yield(data.dict())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/models/yield_model.py", line 53, in predict_yield
+    season = inputs.get('season', '').lower()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'lower'
+INFO:     127.0.0.1:62180 - "POST /predict/yield HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/protocols/http/h11_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/main.py", line 60, in get_yield_prediction
+    result = predict_yield(data.dict())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/models/yield_model.py", line 53, in predict_yield
+    season = inputs.get('season', '').lower()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'lower'
+INFO:     127.0.0.1:62252 - "POST /predict/yield HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/protocols/http/h11_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/main.py", line 60, in get_yield_prediction
+    result = predict_yield(data.dict())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/models/yield_model.py", line 53, in predict_yield
+    season = inputs.get('season', '').lower()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'lower'
+INFO:     127.0.0.1:62255 - "POST /predict/yield HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/protocols/http/h11_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/main.py", line 60, in get_yield_prediction
+    result = predict_yield(data.dict())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/models/yield_model.py", line 53, in predict_yield
+    season = inputs.get('season', '').lower()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'lower'
+INFO:     127.0.0.1:62277 - "POST /predict/yield HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/protocols/http/h11_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/main.py", line 60, in get_yield_prediction
+    result = predict_yield(data.dict())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/models/yield_model.py", line 53, in predict_yield
+    season = inputs.get('season', '').lower()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'lower'
+INFO:     127.0.0.1:62301 - "POST /predict/yield HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/protocols/http/h11_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/main.py", line 60, in get_yield_prediction
+    result = predict_yield(data.dict())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/models/yield_model.py", line 53, in predict_yield
+    season = inputs.get('season', '').lower()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'lower'
+INFO:     127.0.0.1:62318 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62318 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62322 - "POST /predict/yield HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/protocols/http/h11_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/main.py", line 60, in get_yield_prediction
+    result = predict_yield(data.dict())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/models/yield_model.py", line 49, in predict_yield
+    temperature = float(inputs.get('temperature', 25))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+INFO:     127.0.0.1:62474 - "POST /predict/yield HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/protocols/http/h11_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/main.py", line 60, in get_yield_prediction
+    result = predict_yield(data.dict())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/models/yield_model.py", line 53, in predict_yield
+    season = inputs.get('season', '').lower()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'lower'
+INFO:     127.0.0.1:62483 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62483 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62492 - "GET /predict/states HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62494 - "GET /predict/prices/all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62494 - "GET /predict/states HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62494 - "GET /predict/prices/all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62494 - "GET /predict/prices/all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62494 - "GET /predict/prices/all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62494 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62494 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62494 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62548 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62548 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62562 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62562 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62562 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62562 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62596 - "POST /predict/yield HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/protocols/http/h11_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/main.py", line 60, in get_yield_prediction
+    result = predict_yield(data.dict())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/models/yield_model.py", line 49, in predict_yield
+    temperature = float(inputs.get('temperature', 25))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+INFO:     127.0.0.1:62646 - "POST /predict/yield HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/protocols/http/h11_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/main.py", line 60, in get_yield_prediction
+    result = predict_yield(data.dict())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/models/yield_model.py", line 49, in predict_yield
+    temperature = float(inputs.get('temperature', 25))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+INFO:     127.0.0.1:62690 - "POST /predict/yield HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/protocols/http/h11_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/main.py", line 60, in get_yield_prediction
+    result = predict_yield(data.dict())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/models/yield_model.py", line 49, in predict_yield
+    temperature = float(inputs.get('temperature', 25))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+INFO:     127.0.0.1:62738 - "POST /predict/yield HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/protocols/http/h11_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/main.py", line 60, in get_yield_prediction
+    result = predict_yield(data.dict())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/models/yield_model.py", line 53, in predict_yield
+    season = inputs.get('season', '').lower()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'lower'
+INFO:     127.0.0.1:62746 - "POST /predict/yield HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/protocols/http/h11_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/main.py", line 60, in get_yield_prediction
+    result = predict_yield(data.dict())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/models/yield_model.py", line 53, in predict_yield
+    season = inputs.get('season', '').lower()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'lower'
+INFO:     127.0.0.1:62755 - "POST /predict/yield HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/protocols/http/h11_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/main.py", line 60, in get_yield_prediction
+    result = predict_yield(data.dict())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/models/yield_model.py", line 53, in predict_yield
+    season = inputs.get('season', '').lower()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'lower'
+INFO:     127.0.0.1:62763 - "POST /predict/yield HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/protocols/http/h11_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/main.py", line 60, in get_yield_prediction
+    result = predict_yield(data.dict())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/models/yield_model.py", line 53, in predict_yield
+    season = inputs.get('season', '').lower()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'lower'
+WARNING:  StatReload detected changes in 'models/yield_model.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [16177]
+INFO:     Started server process [16824]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:62792 - "POST /predict/yield HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62883 - "POST /predict/yield HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [16824]
+INFO:     Started server process [16911]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:63353 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63353 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63409 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63409 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63409 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63409 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63660 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63660 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63780 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63780 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63836 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63836 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63836 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63836 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63836 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63836 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63881 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63907 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63907 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64199 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64199 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64332 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64332 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64561 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64561 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64610 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64610 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64613 - "POST /predict/yield HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/protocols/http/h11_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/main.py", line 60, in get_yield_prediction
+    result = predict_yield(data.dict())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/models/yield_model.py", line 49, in predict_yield
+    temperature = float(inputs.get('temperature', 25))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+INFO:     127.0.0.1:64615 - "POST /predict/yield HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/protocols/http/h11_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/main.py", line 60, in get_yield_prediction
+    result = predict_yield(data.dict())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/models/yield_model.py", line 49, in predict_yield
+    temperature = float(inputs.get('temperature', 25))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+INFO:     127.0.0.1:64618 - "POST /predict/yield HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/protocols/http/h11_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1159, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/fastapi/routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/starlette/concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2518, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1002, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/main.py", line 60, in get_yield_prediction
+    result = predict_yield(data.dict())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/surajzaware/Downloads/stitch_kisan_ai_assistant/ml_services/models/yield_model.py", line 49, in predict_yield
+    temperature = float(inputs.get('temperature', 25))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+INFO:     127.0.0.1:64624 - "POST /predict/disease HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64633 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64633 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64645 - "POST /predict/yield HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64654 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64654 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64664 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64664 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64664 - "GET /predict/states HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64666 - "GET /predict/prices/all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64664 - "GET /predict/states HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64664 - "GET /predict/prices/all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64664 - "GET /predict/prices/all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64664 - "GET /predict/prices/all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64672 - "GET /predict/mandis?state=Maharashtra HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64674 - "GET /predict/prices/all?state=Maharashtra HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64685 - "GET /predict/mandis?state=Uttar%20Pradesh HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64687 - "GET /predict/prices/all?state=Uttar%20Pradesh HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64687 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64687 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64708 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64708 - "GET /predict/price?crop=wheat HTTP/1.1" 200 OK
